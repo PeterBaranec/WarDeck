@@ -14,6 +14,9 @@ function handleClick() {
     .then((data) => {
       remainingCards.textContent = `Remaining cards: ${data.remaining}`;
       drawCardBtn.disabled = false;
+      header.textContent = "Game of War";
+      computerScoreEl.textContent = "Computer score: 0";
+      playerScoreEl.textContent = "My score: 0";
       deckId = data.deck_id;
     });
 }
